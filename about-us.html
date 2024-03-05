@@ -94,15 +94,16 @@
             background-color: rgba(128, 128, 128, 0.5);
             color: white;
             padding: 20px;
-            text-align: center;
+            text-align: center; /* This centers text for non-flexbox containers */
             position: fixed;
             bottom: 0;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* This will center all flex items */
             align-items: center;
             z-index: 1;
         }
+
 
 
         @media (max-width: 600px) {
