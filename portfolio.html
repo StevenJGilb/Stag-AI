@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Modern Furniture Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Slab', serif;
+            overflow: auto;
+        }
+
+        .title-section, .navigation, .content-section, .bottom-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f3f1ed;
+        }
+
+        .navigation {
+            background-color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: dodgerblue;
+        }
+
+        .content-section-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .images-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allows images to stack on smaller screens */
+        }
+
+        .image-container {
+            box-sizing: border-box;
+            padding: 5px; /* Spacing between images */
+            width: 536px; /* Fixed width */
+            max-width: 100%; /* Ensures responsiveness */
+        }
+
+        .image-container img {
+            width: 100%; /* Make image responsive */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 536px; /* Maximum width */
+            max-height: 320px; /* Maximum height, maintaining aspect ratio */
+        }
+
+        .image-description {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .start-now-button {
+            display: inline-block;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .start-now-button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="title-section">
+    <h1>Portfolio</h1>
+</div>
+
+<div class="navigation">
+    <a href="index.html"></a>
+    <a href="about-us.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+</div>
+
+<div class="content-section">
+    <div class="content-section-title">Our Recent Work</div>
+    <div class="images-row">
+        <div class="image-container">
+            <img src="empty-room.jpg" alt="Project 1">
+        </div>
+        <div class="image-container">
+            <img src="room2.jpg" alt="Project 2">
+        </div>
+    </div>
+    <div class="image-description">Here is a description of our projects. We focus on delivering quality and innovation.</div>
+    <a href="/services" class="start-now-button">Start Now</a>
+</div>
+
+<div class="bottom-section">
+    © 2023 Modern Furniture Website
+</div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Furniture Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Slab', serif;
+            overflow: auto;
+            height: 100%;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -100;
+        }
+
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            -webkit-filter: blur(8px);
+            filter: blur(8px);
+        }
+
+        .title-section {
+            background-color: white;
+            color: black;
+            padding: 5px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .sub-title {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .title-section h1, .sub-title {
+            margin: 0; /* Removes margin from title and subtitle */
+            padding: 0; /* Ensures no padding is adding extra space */
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #f3f1ed;
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .navigation a {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: dodgerblue;
+        }
+
+        /* Increase gap for video background visibility */
+        .gap {
+            height: 25vh; /* Increased height for a larger gap */
+        }
+
+        .content-section {
+            color: white;
+            font-size: 36px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 80px; /* Increased margin to lower the content section */
+            font-weight: bold;
+            font-stretch: narrower;
+        }
+
+        .content-section button {
+            display: block;         /* Make the button a block-level element */
+            margin: 20px auto;      /* Centers the button and adds some space */
+            background-color: rgb(68, 73, 78); 
+            color: white;
+            border: none;          
+            padding: 10px 20px;     
+            cursor: pointer;        
+            border-radius: 5px;     /* Optional: Add rounded corners */
+            transition: background-color 0.3s ease; /* Smooth background color change */
+            font-size: 18px;
+        }
+
+        .content-section button:hover {
+            background-color: #2e2e2e; /* Darker blue on hover */
+        }
+        
+        .bottom-section {
+            background-color: rgba(128, 128, 128, 0.5);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+        }
+
+        input[type=email], button {
+            padding: 10px;
+            display: inline-block;
+        }
+
+        input[type=email] {
+            width: calc(100% - 120px); /* Adjust width to make room for button */
+            margin-right: 10px; /* Space between input and button */
+        }
+
+        button {
+            cursor: pointer;
+            background-color: rgb(66, 157, 202);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        /* Adjust form to align button to the right */
+        .bottom-section form {
+            width: 100%;
+            max-width: 600px; /* Adjust as needed */   
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .underline-animation {
+            width: 5%; /* Initially no width */
+            height: 4px; 
+            background-color: rgb(255, 255, 255); /* Match your existing color scheme */
+            margin: 10px auto; /* Center the line and provide some spacing */
+            display: block; 
+            transition: width 1s ease-in-out; /* Adjust transition speed as needed */
+        }
+
+        .content-section:hover .underline-animation { /* Animate on parent element hover */
+            width: 50%;  /* Expand to full width on hover */
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="video-background">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="title-section">
+    <h1>STAG-AI</h1>
+    <div class="sub-title">- Seattle -</div>
+</div>
+
+<div class="navigation">
+    <a href="about-us.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+</div>
+
+<div class="gap"></div> <!-- Increased gap to showcase video background -->
+
+<div class="content-section">
+    <p>DESIGN YOUR HOUSE WITH AI</p>
+    <div class="underline-animation"></div> <button onclick="window.location.href='service.html'">Start Here</button> 
+</div>
+
+<div class="bottom-section">
+    <p>Subscribe to Our Newsletter!</p>
+    <form>
+        <input type="email" placeholder="Enter your email" id="emailInput">
+        <button id="submitEmail" type="button">Submit</button>
+    </form>
+    <p>@STAG-AI 2024</p>
+</div>
+
+<script>
+    document.getElementById('submitEmail').addEventListener('click', function() {
+        var email = document.getElementById('emailInput').value;
+        alert('Email submitted: ' + email);
+    });
+</script>
+</body>
+</html>
