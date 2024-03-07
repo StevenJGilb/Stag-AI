@@ -15,7 +15,7 @@
         }
 
         .title-section {
-            background-color: white;
+            background-color: rgb(212, 212, 212);
             color: black;
             padding: 5px 0;
             text-align: center;
@@ -40,8 +40,10 @@
         .navigation {
             display: flex;
             justify-content: center;
-            background-color: #ddd;
+            background-color: #f3f1ed;
             padding: 10px 0;
+            position: relative;
+            z-index: 2;
         }
 
         .navigation a {
@@ -66,7 +68,6 @@
             text-align: center;
             background-color: #fff;
             margin-bottom: 80px;
-            margin-top: 100px;
         }
 
         .image-container {
@@ -115,17 +116,18 @@
 </head>
 <body>
 
-<div class="title-section">
-    <h1>About Us</h1>
-    <div class="sub-title">- Seattle -</div>
-</div>
+    <div class="title-section">
+        <img src="logo 2.png" alt="Logo" style="max-width: 120px; margin-bottom: 10px;"> <!-- Adjust max-width as needed -->
+        <div class="sub-title">- About Us -</div>
+    </div>
 
-<div class="navigation">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="service.html">Services</a>
-    <a href="about-us.html">About Us</a>
-</div>
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="http://127.0.0.1:7860/" target ="blank">Services</a>
+        <!-- <a href="service.html">Services</a> -->
+        <a href="about-us.html">About Us</a>
+    </div>
 
 <div class="content-section">
     <!-- Image 1 -->
